@@ -67,7 +67,6 @@ struct ContentView: View {
     }
     
     private var dynamicTypeSection: some View {
-        // TODO: defaultのフォントサイズのままで、smallになっていない。
         Section {
             Text("32pt: Large Title Large Title Large Title")
                 .font(.largeTitle)
@@ -86,7 +85,7 @@ struct ContentView: View {
             Text("11pt: Caption 1 Caption 1 Caption 1 Caption 1 Caption 1 Caption 1")
                 .font(.caption)
         } header: {
-            Text("DYNAMIC TYPE / SIZE - SMALL")
+            Text("DYNAMIC TYPE")
         }
     }
 }
