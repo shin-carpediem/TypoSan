@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var sizeType: Int = 1 {
-        didSet { updateFontSize() }
-    }
+    @State private var sizeType: Int = 1
     
     @State private var largeTitleSize: CGFloat = 0
     @State private var titleSize: CGFloat = 0
@@ -36,33 +34,40 @@ struct ContentView: View {
             Text("xxLarge").tag(5)
             Text("xxxLarge").tag(6)
         }
-        .pickerStyle(.segmented)
+        .pickerStyle(.wheel)
+        .onAppear(perform: {
+            updateFontSize(sizeType: 1)
+        })
+        .onChange(of: sizeType) { changedSize in
+            updateFontSize(sizeType: changedSize)
+        }
     }
    
     private var staticTypeSection: some View {
         Section {
-            Text("\(largeTitleSize)pt: Large Title Large Title Large Title")
-                .font(.largeTitle)
-            Text("\(titleSize)pt: Title 1 Title 1 Title 1 Title 1 Title 1")
-                .font(.title)
-            Text("\(headLineSize)pt: Headline Headline Headline Headline Headline")
-                .font(.headline)
-            Text("\(bodySize)pt: Body Body Body Body Body Body Body Body")
-                .font(.body)
-            Text("\(calloutSize)pt: Callout Callout Callout Callout Callout Callout")
-                .font(.callout)
-            Text("\(subheadSize)pt: Subhead Subhead Subhead Subhead Subhead")
-                .font(.subheadline)
-            Text("\(footnoteSize)pt: Footnone Footnone Footnone Footnone Footnone Footnone")
-                .font(.footnote)
-            Text("\(captionSize)pt: Caption 1 Caption 1 Caption 1 Caption 1 Caption 1 Caption 1")
-                .font(.caption)
+            Text("\(largeTitleSize.int)pt: Large Title Large Title Large Title")
+                .font(.system(size: largeTitleSize))
+            Text("\(titleSize.int)pt: Title 1 Title 1 Title 1 Title 1 Title 1")
+                .font(.system(size: titleSize))
+            Text("\(headLineSize.int)pt: Headline Headline Headline Headline Headline")
+                .font(.system(size: headLineSize, weight: .semibold))
+            Text("\(bodySize.int)pt: Body Body Body Body Body Body Body Body")
+                .font(.system(size: bodySize))
+            Text("\(calloutSize.int)pt: Callout Callout Callout Callout Callout Callout")
+                .font(.system(size: calloutSize))
+            Text("\(subheadSize.int)pt: Subhead Subhead Subhead Subhead Subhead")
+                .font(.system(size: subheadSize))
+            Text("\(footnoteSize.int)pt: Footnone Footnone Footnone Footnone Footnone Footnone")
+                .font(.system(size: footnoteSize))
+            Text("\(captionSize.int)pt: Caption 1 Caption 1 Caption 1 Caption 1 Caption 1 Caption 1")
+                .font(.system(size: captionSize))
         } header: {
-            Text("STATIC TYPE / SIZE - \(sizeType)")
+            Text("STATIC TYPE")
         }
     }
     
     private var dynamicTypeSection: some View {
+        // TODO: defaultのフォントサイズのままで、smallになっていない。
         Section {
             Text("32pt: Large Title Large Title Large Title")
                 .font(.largeTitle)
@@ -87,7 +92,7 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    private func updateFontSize() {
+    private func updateFontSize(sizeType: Int) {
         if sizeType == 0 {
             largeTitleSize = HIGTypeSize.xSmall.sizeSet.largeTitle
             titleSize = HIGTypeSize.xSmall.sizeSet.title1

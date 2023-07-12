@@ -12,6 +12,7 @@
 		F58F30782A5F086A00417B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F30772A5F086A00417B9A /* Assets.xcassets */; };
 		F58F307B2A5F086A00417B9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */; };
 		F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */; };
+		F58F30842A5F221F00417B9A /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30832A5F221F00417B9A /* Foundation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F58F30772A5F086A00417B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGTypeSizeSet.swift; sourceTree = "<group>"; };
+		F58F30832A5F221F00417B9A /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				F58F30732A5F086800417B9A /* TypoSanApp.swift */,
 				F58F30752A5F086800417B9A /* ContentView.swift */,
 				F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */,
+				F58F30832A5F221F00417B9A /* Foundation+Extension.swift */,
 				F58F30772A5F086A00417B9A /* Assets.xcassets */,
 				F58F30792A5F086A00417B9A /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58F30842A5F221F00417B9A /* Foundation+Extension.swift in Sources */,
 				F58F30762A5F086800417B9A /* ContentView.swift in Sources */,
 				F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */,
 				F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */,
@@ -285,7 +289,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +320,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
