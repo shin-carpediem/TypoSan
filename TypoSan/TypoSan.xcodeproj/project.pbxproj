@@ -11,6 +11,7 @@
 		F58F30762A5F086800417B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30752A5F086800417B9A /* ContentView.swift */; };
 		F58F30782A5F086A00417B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F30772A5F086A00417B9A /* Assets.xcassets */; };
 		F58F307B2A5F086A00417B9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */; };
+		F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F58F30752A5F086800417B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F58F30772A5F086A00417B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGTypeSizeSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				F58F30732A5F086800417B9A /* TypoSanApp.swift */,
 				F58F30752A5F086800417B9A /* ContentView.swift */,
+				F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */,
 				F58F30772A5F086A00417B9A /* Assets.xcassets */,
 				F58F30792A5F086A00417B9A /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58F30762A5F086800417B9A /* ContentView.swift in Sources */,
+				F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */,
 				F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
