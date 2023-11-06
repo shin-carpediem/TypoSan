@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512917E2AF7D1B800452BCE /* TypographyModel.swift */; };
+		F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291842AF7D3D600452BCE /* TypographyProvider.swift */; };
+		F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291862AF7D9A800452BCE /* TypographySize.swift */; };
+		F512918D2AF9317400452BCE /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512918C2AF9317400452BCE /* ContentController.swift */; };
 		F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30732A5F086800417B9A /* TypoSanApp.swift */; };
 		F58F30762A5F086800417B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30752A5F086800417B9A /* ContentView.swift */; };
 		F58F30782A5F086A00417B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F30772A5F086A00417B9A /* Assets.xcassets */; };
 		F58F307B2A5F086A00417B9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */; };
-		F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */; };
-		F58F30842A5F221F00417B9A /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30832A5F221F00417B9A /* Foundation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F512917E2AF7D1B800452BCE /* TypographyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModel.swift; sourceTree = "<group>"; };
+		F51291842AF7D3D600452BCE /* TypographyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyProvider.swift; sourceTree = "<group>"; };
+		F51291862AF7D9A800452BCE /* TypographySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographySize.swift; sourceTree = "<group>"; };
+		F512918C2AF9317400452BCE /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		F58F30702A5F086800417B9A /* TypoSan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypoSan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58F30732A5F086800417B9A /* TypoSanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoSanApp.swift; sourceTree = "<group>"; };
 		F58F30752A5F086800417B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F58F30772A5F086A00417B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58F307A2A5F086A00417B9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIGTypeSizeSet.swift; sourceTree = "<group>"; };
-		F58F30832A5F221F00417B9A /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F512917B2AF7CF6800452BCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F512918E2AF931FB00452BCE /* Components */,
+				F58F30752A5F086800417B9A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F512917D2AF7D19F00452BCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F51291862AF7D9A800452BCE /* TypographySize.swift */,
+				F512917E2AF7D1B800452BCE /* TypographyModel.swift */,
+				F51291842AF7D3D600452BCE /* TypographyProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F512918B2AF9315F00452BCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F512918C2AF9317400452BCE /* ContentController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F512918E2AF931FB00452BCE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F58F30672A5F086800417B9A = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +93,10 @@
 		F58F30722A5F086800417B9A /* TypoSan */ = {
 			isa = PBXGroup;
 			children = (
+				F512917D2AF7D19F00452BCE /* Model */,
+				F512918B2AF9315F00452BCE /* Controller */,
+				F512917B2AF7CF6800452BCE /* View */,
 				F58F30732A5F086800417B9A /* TypoSanApp.swift */,
-				F58F30752A5F086800417B9A /* ContentView.swift */,
-				F58F30812A5F12B800417B9A /* HIGTypeSizeSet.swift */,
-				F58F30832A5F221F00417B9A /* Foundation+Extension.swift */,
 				F58F30772A5F086A00417B9A /* Assets.xcassets */,
 				F58F30792A5F086A00417B9A /* Preview Content */,
 			);
@@ -143,9 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F58F30842A5F221F00417B9A /* Foundation+Extension.swift in Sources */,
+				F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */,
+				F512918D2AF9317400452BCE /* ContentController.swift in Sources */,
+				F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */,
+				F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */,
 				F58F30762A5F086800417B9A /* ContentView.swift in Sources */,
-				F58F30822A5F12B800417B9A /* HIGTypeSizeSet.swift in Sources */,
 				F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
