@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {}
+    
     // MARK: - Private
     
     private final class State: ObservableObject {
@@ -43,13 +45,9 @@ struct ContentView: View {
     
     private var picker: some View {
         Picker("", selection: $state.typographySize) {
-            Text("xSmall").tag(0)
-            Text("Small").tag(1)
-            Text("Medium").tag(2)
-            Text("Large (Default)").tag(3)
-            Text("xLarge").tag(4)
-            Text("xxLarge").tag(5)
-            Text("xxxLarge").tag(6)
+            ForEach(pickerLabelList, id: \.self) { pickerLabel in
+                Text(pickerLabel).tag(pickerLabel.firstIndex(where: { String($0) == pickerLabel }))
+            }
         }
         .pickerStyle(.wheel)
         .onChange(of: state.typographySize) { newSize in
@@ -61,7 +59,7 @@ struct ContentView: View {
     private var typographyList: some View {
         List {
             ForEach(state.typographyList, id: \.self) { (typography: TypographyModel) in
-                Text("\(typography.size)pt: " + "\(typography.style)")
+                Text("\(typography.size.roundToInt)pt: " + "\(typography.style)")
                     .font(.system(size: typography.size,
                                   weight: typography.weight))
             }
@@ -79,7 +77,15 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Private Extension
+// MARK: - Private
+
+private let pickerLabelList = ["xSmall",
+                               "Small",
+                               "Medium",
+                               "Large (Default)",
+                               "xLarge",
+                               "xxLarge",
+                               "xxxLarge"]
 
 private extension CGFloat {
     var roundToInt: Int {
@@ -89,8 +95,6 @@ private extension CGFloat {
 
 // MARK: - Preview
 
-struct ContentView_Preview: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

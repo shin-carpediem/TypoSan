@@ -10,7 +10,6 @@
 		F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512917E2AF7D1B800452BCE /* TypographyModel.swift */; };
 		F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291842AF7D3D600452BCE /* TypographyProvider.swift */; };
 		F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291862AF7D9A800452BCE /* TypographySize.swift */; };
-		F512918D2AF9317400452BCE /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512918C2AF9317400452BCE /* ContentController.swift */; };
 		F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30732A5F086800417B9A /* TypoSanApp.swift */; };
 		F58F30762A5F086800417B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30752A5F086800417B9A /* ContentView.swift */; };
 		F58F30782A5F086A00417B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F30772A5F086A00417B9A /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 		F512917E2AF7D1B800452BCE /* TypographyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModel.swift; sourceTree = "<group>"; };
 		F51291842AF7D3D600452BCE /* TypographyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyProvider.swift; sourceTree = "<group>"; };
 		F51291862AF7D9A800452BCE /* TypographySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographySize.swift; sourceTree = "<group>"; };
-		F512918C2AF9317400452BCE /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		F58F30702A5F086800417B9A /* TypoSan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypoSan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58F30732A5F086800417B9A /* TypoSanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoSanApp.swift; sourceTree = "<group>"; };
 		F58F30752A5F086800417B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +41,6 @@
 		F512917B2AF7CF6800452BCE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F512918E2AF931FB00452BCE /* Components */,
 				F58F30752A5F086800417B9A /* ContentView.swift */,
 			);
 			path = View;
@@ -57,21 +54,6 @@
 				F51291842AF7D3D600452BCE /* TypographyProvider.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F512918B2AF9315F00452BCE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F512918C2AF9317400452BCE /* ContentController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F512918E2AF931FB00452BCE /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		F58F30672A5F086800417B9A = {
@@ -94,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				F512917D2AF7D19F00452BCE /* Model */,
-				F512918B2AF9315F00452BCE /* Controller */,
 				F512917B2AF7CF6800452BCE /* View */,
 				F58F30732A5F086800417B9A /* TypoSanApp.swift */,
 				F58F30772A5F086A00417B9A /* Assets.xcassets */,
@@ -182,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */,
-				F512918D2AF9317400452BCE /* ContentController.swift in Sources */,
 				F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */,
 				F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */,
 				F58F30762A5F086800417B9A /* ContentView.swift in Sources */,
