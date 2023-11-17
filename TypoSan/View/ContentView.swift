@@ -5,27 +5,23 @@ struct ContentView: View {
     
     // MARK: - Private
     
-    private final class State: ObservableObject {
-        @Published var typographySize: TypographySize
-        @Published var typographyList: [TypographyModel]
-        @Published var stepperSize: Int
-        @Published var inputText: String
+    private final class ViewState: ObservableObject {
+        @Published var typographySize: TypographySize = .largeDefault
+        @Published private(set) var typographyList = [TypographyModel]()
+        @Published var stepperSize = 17
+        @Published var inputText = "こんにちは"
         
-        init(typographySize: TypographySize,
-             typographyList: [TypographyModel],
-             stepperSize: Int,
-             inputText: String) {
-            self.typographySize = typographySize
-            self.typographyList = typographyList
-            self.stepperSize = stepperSize
-            self.inputText = inputText
+        init() {}
+        
+        func updateTypographyList(with size: TypographySize) {
+            typographyList = provider.typographyList(with: size)
         }
+        
+        private let provider = TypographyProvider()
     }
     
-    @StateObject private var state: State = .init(typographySize: .largeDefault,
-                                                  typographyList: [],
-                                                  stepperSize: 17,
-                                                  inputText: "こんにちは")
+    @StateObject private var state = ViewState()
+    @State private var pickerSelectionTag = 3
     
     private let provider = TypographyProvider()
     
@@ -38,21 +34,20 @@ struct ContentView: View {
             stepper
                 .padding()
         }
-        .onAppear {
-            state.typographyList = provider.typographyList(with: .largeDefault)
-        }
     }
     
     private var picker: some View {
-        Picker("", selection: $state.typographySize) {
-            ForEach(pickerLabelList, id: \.self) { pickerLabel in
-                Text(pickerLabel).tag(pickerLabel.firstIndex(where: { String($0) == pickerLabel }))
+        Picker("", selection: $pickerSelectionTag) {
+            ForEach(Array(pickerLabelList.enumerated()), id: \.element) { index, pickerLabel in
+                Text(pickerLabel).tag(index)
             }
         }
         .pickerStyle(.wheel)
-        .onChange(of: state.typographySize) { newSize in
-            state.typographySize = newSize
-            state.typographyList = provider.typographyList(with: newSize)
+        .onAppear {
+            state.updateTypographyList(with: .largeDefault)
+        }
+        .onChange(of: state.typographySize) { (newSize: TypographySize) in
+            state.updateTypographyList(with: newSize)
         }
     }
     
@@ -77,17 +72,17 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Private
+// MARK: - FilePrivate
 
-private let pickerLabelList = ["xSmall",
-                               "Small",
-                               "Medium",
-                               "Large (Default)",
-                               "xLarge",
-                               "xxLarge",
-                               "xxxLarge"]
+fileprivate let pickerLabelList = ["xSmall",
+                                   "Small",
+                                   "Medium",
+                                   "Large (Default)",
+                                   "xLarge",
+                                   "xxLarge",
+                                   "xxxLarge"]
 
-private extension CGFloat {
+fileprivate extension CGFloat {
     var roundToInt: Int {
         Int(self)
     }
