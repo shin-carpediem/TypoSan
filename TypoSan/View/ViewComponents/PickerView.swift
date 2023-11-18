@@ -24,13 +24,9 @@ struct PickerView: View {
 
 // MARK: - FilePrivate
 
-fileprivate let pickerLabelList = ["xSmall",
-                                   "Small",
+fileprivate let pickerLabelList = ["xSmall", "Small",
                                    "Medium",
-                                   "Large (Default)",
-                                   "xLarge",
-                                   "xxLarge",
-                                   "xxxLarge"]
+                                   "Large (Default)", "xLarge", "xxLarge", "xxxLarge"]
 
 // MARK: - Preview
 
