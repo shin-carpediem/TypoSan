@@ -17,6 +17,22 @@ struct ContentView: View {
             typographyList = provider.typographyList(with: size)
         }
         
+        func updateTypographyList(with sizeTag: Int) {
+            let size: TypographySize
+            if sizeTag == 0 { size = .xSmall }
+            else if sizeTag == 1 { size = .small }
+            else if sizeTag == 2 { size = .medium }
+            else if sizeTag == 3 { size = .largeDefault }
+            else if sizeTag == 4 { size = .xLarge }
+            else if sizeTag == 5 { size = .xxLarge }
+            else if sizeTag == 6 { size = .xxxLarge }
+            else {
+                assertionFailure()
+                size = .largeDefault
+            }
+            typographyList = provider.typographyList(with: size)
+        }
+        
         private let provider = TypographyProvider()
     }
     
@@ -38,7 +54,7 @@ struct ContentView: View {
     
     private var picker: some View {
         Picker("", selection: $pickerSelectionTag) {
-            ForEach(Array(pickerLabelList.enumerated()), id: \.element) { index, pickerLabel in
+            ForEach(Array(pickerLabelList.enumerated()), id: \.element) { (index: Int, pickerLabel: String) in
                 Text(pickerLabel).tag(index)
             }
         }
@@ -46,8 +62,8 @@ struct ContentView: View {
         .onAppear {
             state.updateTypographyList(with: .largeDefault)
         }
-        .onChange(of: state.typographySize) { (newSize: TypographySize) in
-            state.updateTypographyList(with: newSize)
+        .onChange(of: pickerSelectionTag) { (newSizeTag: Int) in
+            state.updateTypographyList(with: newSizeTag)
         }
     }
     
