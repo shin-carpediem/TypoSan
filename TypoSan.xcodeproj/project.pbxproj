@@ -10,6 +10,9 @@
 		F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F512917E2AF7D1B800452BCE /* TypographyModel.swift */; };
 		F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291842AF7D3D600452BCE /* TypographyProvider.swift */; };
 		F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51291862AF7D9A800452BCE /* TypographySize.swift */; };
+		F529C9162B085799008A3EDC /* TypographyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C9152B085799008A3EDC /* TypographyListView.swift */; };
+		F529C9182B085A18008A3EDC /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C9172B085A18008A3EDC /* StepperView.swift */; };
+		F529C91A2B085AF5008A3EDC /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C9192B085AF5008A3EDC /* PickerView.swift */; };
 		F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30732A5F086800417B9A /* TypoSanApp.swift */; };
 		F58F30762A5F086800417B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F30752A5F086800417B9A /* ContentView.swift */; };
 		F58F30782A5F086A00417B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58F30772A5F086A00417B9A /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		F512917E2AF7D1B800452BCE /* TypographyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModel.swift; sourceTree = "<group>"; };
 		F51291842AF7D3D600452BCE /* TypographyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyProvider.swift; sourceTree = "<group>"; };
 		F51291862AF7D9A800452BCE /* TypographySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographySize.swift; sourceTree = "<group>"; };
+		F529C9152B085799008A3EDC /* TypographyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyListView.swift; sourceTree = "<group>"; };
+		F529C9172B085A18008A3EDC /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		F529C9192B085AF5008A3EDC /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		F58F30702A5F086800417B9A /* TypoSan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypoSan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58F30732A5F086800417B9A /* TypoSanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoSanApp.swift; sourceTree = "<group>"; };
 		F58F30752A5F086800417B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +47,7 @@
 		F512917B2AF7CF6800452BCE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F529C9142B085762008A3EDC /* ViewComponents */,
 				F58F30752A5F086800417B9A /* ContentView.swift */,
 			);
 			path = View;
@@ -54,6 +61,16 @@
 				F51291842AF7D3D600452BCE /* TypographyProvider.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F529C9142B085762008A3EDC /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F529C9152B085799008A3EDC /* TypographyListView.swift */,
+				F529C9172B085A18008A3EDC /* StepperView.swift */,
+				F529C9192B085AF5008A3EDC /* PickerView.swift */,
+			);
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 		F58F30672A5F086800417B9A = {
@@ -162,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F529C9162B085799008A3EDC /* TypographyListView.swift in Sources */,
 				F51291872AF7D9A800452BCE /* TypographySize.swift in Sources */,
 				F51291852AF7D3D600452BCE /* TypographyProvider.swift in Sources */,
 				F512917F2AF7D1B800452BCE /* TypographyModel.swift in Sources */,
+				F529C91A2B085AF5008A3EDC /* PickerView.swift in Sources */,
+				F529C9182B085A18008A3EDC /* StepperView.swift in Sources */,
 				F58F30762A5F086800417B9A /* ContentView.swift in Sources */,
 				F58F30742A5F086800417B9A /* TypoSanApp.swift in Sources */,
 			);
